@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="public/expense.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
+
+    <script
+      src="https://kit.fontawesome.com/be27bbf8b7.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Keep-Track</title>
+  </head>
+  <body class="md:h-[98vh] flex items-center justify-center flex-col">
+    <h1 class="text-center font-bold text-2xl">Expense Tracker</h1>
+    <div
+      class="flex justify-center items-center flex-col-reverse md:flex-row mt-10 md:gap-x-14 mx-2 md:mx-7 rounded-[.45rem] px-3 py-4 md:px-10 md:py-8 md:items-start bg-gray-200"
+    >
+      <!-- Expenses Container -->
+      <div class="lg:w-[40rem] md:w-[25rem]">
+        <!-- total -->
+        <div
+          class="bg-pink-400 pr-40 pl-2 py-2 rounded-[.45rem] flex justify-center items-start flex-col"
+        >
+          <p>Total</p>
+          <h1 id="totalExpenses" class="text-3xl font-bold"></h1>
+        </div>
+
+        <!-- break down -->
+        <h2 class="text-xl text-gray-400 mt-2">Break Down</h2>
+        <div
+          id="breakDownContainer"
+          class="mt-4 px-5 pt-8 h-[15rem] overflow-y-auto bg-white"
+        ></div>
+      </div>
+
+      <!-- Expense form -->
+
+      <div
+        class="flex justify-center items-start flex-col gap-y-10 md:mt-20 my-5 p-4"
+      >
+        <div class="flex justify-center items-center">
+          <i class="fas fa-dollar-sign"></i>
+          <input
+            type="number"
+            placeholder="enter cost..."
+            class="ml-4 focus:outline-none border-b-1"
+            id="costInput"
+          />
+        </div>
+
+        <div class="flex justify-center items-center">
+          <i class="fa-solid fa-tag"></i>
+          <input
+            type="text"
+            placeholder="enter expense..."
+            class="ml-4 focus:outline-none border-b-1"
+            id="expenseNameInput"
+          />
+        </div>
+
+        <!-- expense type -->
+        <div class="flex flex-col">
+          <div>
+            <input
+              type="radio"
+              name="expense"
+              id="expenseFood"
+              value="Food/Berverage"
+            />
+            <label for="expenseFood">food/Berverage</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              name="expense"
+              id="expenseTravel"
+              value="Travel/Commute"
+            />
+            <label for="expenseTravel">Travel/Commute</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              name="expense"
+              id="expenseShopping"
+              value="Shopping"
+            />
+            <label for="expenseShopping">Shopping</label>
+          </div>
+        </div>
+        <button
+          class="mb-5 bg-pink-400 px-3 py-1 rounded-[.45rem] w-full hover:bg-black hover:text-pink-400 cursor-pointer"
+          id="submitExpenseBtn"
+        >
+          Add expense
+        </button>
+      </div>
+    </div>
+
+    <!-- expense card structure -->
+    <!-- <div class="flex justify-between w-full items-center">
+      <div class="flex gap-x-3">
+        <i class="`${}`">yo</i>
+        <div>
+          <h1>`${}` groceries</h1>
+          <p>`${}` shopping</p>
+        </div>
+      </div>
+
+      <div class="flex gap-x-5">
+        <div>
+          <h1>`${}`$12</h1>
+          <p>`${}` 2 may 2020</p>
+        </div>
+        <button id="editBtn"><i class="fa-solid fa-pen"></i></button>
+        <button id="deleteBtn"><i class="fa-solid fa-trash"></i></button>
+      </div>
+    </div> -->
+
+    <script type="" src="/src/script.js"></script>
+  </body>
+</html>
