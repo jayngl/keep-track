@@ -71,6 +71,12 @@ let expenseIcon = "";
 let saveClickCounter = 0;
 let expenseTotal = 0;
 const displayExpense = () => {
+  if (allExpenses.length === 0) {
+    breakDownContainer.innerHTML = "No expenses yet...";
+    expenseTotal = 0;
+  }
+
+  expenseTotal = 0;
   allExpenses.forEach((expense, index) => {
     const expenseCard = document.createElement("div");
     expenseCard.classList.add(
@@ -211,6 +217,8 @@ submitExpenseBtn.addEventListener("click", () => {
   ) {
     addExpense();
     refreshForm();
+    expenseNameInput.placeholder = "enter expense...";
+    costInput.placeholder = "enter cost...";
   } else {
     alert("ensure no fields are empty");
   }
